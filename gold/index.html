@@ -68,32 +68,7 @@
             }
         });
     </script>
-    <script>
-        // Set the date we're counting down to
-        var countDownDate = new Date("May 19, 2024 16:00:00 GMT+0700").getTime();
-
-        // Update the countdown every 1 second
-        var countdownFunction = setInterval(function() {
-            var now = new Date().getTime();
-            var distance = countDownDate - now;
-
-            // Calculate time remaining
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Display the result in the element with id="countdown"
-            document.getElementById("countdown").innerHTML =
-                days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-
-            // If the countdown is finished, write some text
-            if (distance < 0) {
-                clearInterval(countdownFunction);
-                document.getElementById("countdown").innerHTML = "Experience the safest smart contract designed for the long term.";
-            }
-        }, 1000);
-    </script>
+    
     <script type="text/javascript">
         ! function(o, c) {
             var n = c.documentElement,
