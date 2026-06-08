@@ -379,6 +379,363 @@ var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax
 					</div>
 		</section>
 				</center>
+<style>
+:root {
+/* Premium corporate color palette */
+--primary: #0f2c59; /* Deep Navy Blue for trust and corporate identity */
+--secondary: #dac0a3; /* Warm Metallic Sand for comfort/luxury accents */
+--dark: #101828; /* Rich slate black for body copy legibility */
+--light-bg: #f8f9fa; /* Off-white background for canvas layout */
+--card-bg: #ffffff; /* Pure white content container */
+--border: #eaecf0; /* Minimalistic divider system color */
+--accent-muted: #f4efe9; /* Muted warm cream tone for quote styling */
+--primary-light: #163d7a; /* Secondary hover state blue variant */
+}
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+font-family: 'Inter', sans-serif;
+background-color: var(--light-bg);
+color: var(--dark);
+line-height: 1.75;
+padding: 50px 20px;
+-webkit-font-smoothing: antialiased;
+}
+
+.container {
+max-width: 960px;
+margin: 0 auto;
+background: var(--card-bg);
+padding: 60px;
+border-radius: 16px;
+box-shadow: 0 12px 32px rgba(16, 24, 40, 0.03), 0 4px 12px rgba(16, 24, 40, 0.02);
+}
+
+/* Typography Formatting Rules */
+h1, h2, h3, h4 {
+font-family: 'Inter', sans-serif;
+color: var(--primary);
+font-weight: 700;
+letter-spacing: -0.02em;
+}
+
+h1 {
+font-size: 2.75rem;
+text-align: center;
+margin-bottom: 8px;
+}
+
+h2 {
+font-size: 1.85rem;
+margin-top: 45px;
+margin-bottom: 20px;
+border-bottom: 2px solid var(--border);
+padding-bottom: 10px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+h3 {
+font-size: 1.35rem;
+margin-top: 24px;
+margin-bottom: 6px;
+color: var(--primary-light);
+}
+
+h4 {
+font-size: 1.15rem;
+margin-top: 24px;
+margin-bottom: 12px;
+color: var(--primary);
+border-left: 3px solid var(--secondary);
+padding-left: 12px;
+}
+
+p {
+margin-bottom: 20px;
+font-size: 1.05rem;
+color: #344054;
+text-align: justify;
+}
+
+.subtitle {
+font-size: 1.25rem;
+text-align: center;
+font-weight: 500;
+color: #667085;
+margin-bottom: 40px;
+border-bottom: 3px solid var(--secondary);
+padding-bottom: 20px;
+letter-spacing: 0.02em;
+}
+
+/* Blockquote Styling for Visionary Strategic Council */
+blockquote {
+background-color: var(--accent-muted);
+border-left: 4px solid var(--primary);
+padding: 26px;
+margin: 35px 0;
+border-radius: 0 12px 12px 0;
+}
+
+blockquote p {
+font-family: 'Playfair Display', serif;
+font-size: 1.35rem;
+font-style: italic;
+color: var(--primary);
+margin-bottom: 0;
+line-height: 1.5;
+text-align: left;
+}
+
+/* List Architectures */
+ul {
+list-style: none;
+margin-bottom: 24px;
+}
+
+li {
+position: relative;
+padding-left: 32px;
+margin-bottom: 14px;
+font-size: 1.05rem;
+color: #344054;
+}
+
+/* Custom Vector Bullets instead of standard list icons */
+li::before {
+content: "•";
+color: var(--secondary);
+font-weight: 900;
+font-size: 1.8rem;
+position: absolute;
+left: 10px;
+top: -6px;
+}
+
+li strong {
+color: var(--primary);
+font-weight: 600;
+}
+
+/* Protocol Label Tags within the Advisory Section */
+.protocol-tag {
+font-weight: 600;
+color: var(--primary);
+background: rgba(218, 192, 163, 0.35);
+padding: 3px 10px;
+border-radius: 6px;
+font-size: 0.9rem;
+margin-right: 8px;
+display: inline-block;
+letter-spacing: 0.01em;
+}
+
+/* Showroom Contact Card Footers */
+.contact-footer {
+margin-top: 50px;
+background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+color: #ffffff;
+padding: 40px;
+border-radius: 12px;
+text-align: center;
+box-shadow: 0 8px 20px rgba(15, 44, 89, 0.15);
+}
+
+.contact-footer h2 {
+color: #ffffff;
+border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+padding-bottom: 12px;
+justify-content: center;
+font-size: 1.65rem;
+margin-top: 0;
+}
+
+.contact-footer p {
+color: rgba(255, 255, 255, 0.85);
+font-size: 1.1rem;
+margin-bottom: 24px;
+text-align: center;
+}
+
+.grid-locations {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 24px;
+margin-bottom: 24px;
+}
+
+.location-card {
+background: rgba(255, 255, 255, 0.08);
+border: 1px solid rgba(255, 255, 255, 0.15);
+padding: 24px;
+border-radius: 8px;
+text-align: left;
+}
+
+.location-card h3 {
+color: var(--secondary);
+margin-top: 0;
+margin-bottom: 8px;
+font-size: 1.2rem;
+}
+
+.location-card p {
+color: #ffffff;
+font-size: 0.95rem;
+margin-bottom: 0;
+line-height: 1.6;
+text-align: left;
+}
+
+.location-card a {
+color: var(--secondary);
+text-decoration: none;
+font-weight: 600;
+}
+
+.portal-btn {
+display: inline-block;
+background: var(--secondary);
+color: var(--primary);
+padding: 12px 32px;
+border-radius: 6px;
+text-decoration: none;
+font-weight: 700;
+letter-spacing: 0.02em;
+transition: all 0.3s ease;
+}
+
+.portal-btn:hover {
+background: #cdb394;
+transform: translateY(-2px);
+box-shadow: 0 4px 12px rgba(218, 192, 163, 0.3);
+}
+
+/* Screen Size Optimization Layouts */
+@media (max-width: 768px) {
+body {
+padding: 20px 10px;
+}
+.container {
+padding: 30px 20px;
+border-radius: 12px;
+}
+h1 {
+font-size: 2.25rem;
+}
+h2 {
+font-size: 1.5rem;
+}
+.grid-locations {
+grid-template-columns: 1fr;
+gap: 16px;
+}
+.contact-footer {
+padding: 24px;
+}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<!-- Header / Hero Section -->
+<h1>Welcome to Euro Fresh Gallery</h1>
+<div class="subtitle">India's Trusted Sleep & Comfort Destination | Engineered by Brahma Foam Industries</div>
+
+<p>At Euro Fresh Gallery, we believe a great day begins with a flawless night's sleep. We serve as the specialized retail B2C gateway for <strong>Brahma Foam Industries Private Limited (BFIPL)</strong>, delivering scientifically designed mattresses, premium pillows, and advanced PU foam materials straight from our manufacturing floors to your bedroom.</p>
+
+<p>Operating legally under the corporate name <strong>Turbo Solutions</strong> and led by our Proprietor, <strong>Mrs. Prabha Chaurasiya</strong>, the gallery proudly operates under the overarching strategic vision of our Chief Advisor. By managing dedicated flagship experience centers in <strong>Unnao and Prayagraj</strong> and eliminating middleman commissions, we pass 100% of the factory-direct cost savings directly to our customers.</p>
+
+<!-- Visionary & Strategic Council -->
+<h2>🎓 Visionary & Strategic Council</h2>
+
+<blockquote>
+<p>"Trust is not manufactured in factories; it is built across generations through transparency and ethical governance."</p>
+</blockquote>
+
+<h3>Mr. Shyamu Chaurasia</h3>
+<p><em>Chief Advisor</em></p>
+<p>Mr. Shyamu Chaurasia serves as the ultimate cornerstone of Euro Fresh Gallery's strategic vision. Acting as our chief external guiding force, his role centers exclusively on mentoring the brand’s community reputation, fostering long-term consumer trust, and driving regional market integration.</p>
+<p>To maintain the highest levels of corporate clarity and separate institutional governance from day-to-day storefront logistics, his involvement is governed by a precise operational protocol:</p>
+
+<ul>
+
+<li><span class="protocol-tag">🌐 Strategic Stewardship:</span> He provides high-level macro counsel, business ethics formatting, and brand-building roadmap visions.</li>
+<li><span class="protocol-tag">🚫 Operational Isolation:</span> He holds an informal, non-executive advisory-only status. He maintains zero direct involvement in day-to-day administrative tasks, showroom management, or retail operations.</li>
+<li><span class="protocol-tag">🖋️ Absolute Liability Protection:</span> He holds <strong>no signing authority or financial accountability</strong>. He is legally and structurally barred from executing signatures on any corporate paperwork, commercial invoices, customer billing sheets, banking drafts, or legal trade contracts under Turbo Solutions.</li>
+</ul>
+
+<!-- Our Leadership Directive -->
+<h2>Our Leadership Directive</h2>
+<p>Our industrial growth, quality benchmarks, and market expansion are steered by a highly specialized board of technical experts, chemical engineers, and management professionals:</p>
+
+<ul>
+<li><strong>Mr. Shivdutt Sharma (Senior Director):</strong> Master technical advisor and lifelong pioneer in foam engineering supervising heavy manufacturing standards.</li>
+<li><strong>Mr. Amit Kumar (Production Head):</strong> Qualified Chemical Engineer directing flawless factory polymer formulations and strict quality testing.</li>
+<li><strong>Mr. Pawan Sharma (Administrative & Marketing Head):</strong> MBA graduate managing retail expansions, dealer networks, and showroom customer operations.</li>
+<li><strong>Mr. Nagesh Bhardwaj (Financial Operations):</strong> Directing corporate accounts, commercial transparency, auditing, and corporate asset planning.</li>
+<li><strong>Mr. Anil Kumar Sharma (Taxation & Compliance Head):</strong> Guaranteeing corporate tax compliance, regulatory reporting, and legal business ethics across all plants and galleries.</li>
+</ul>
+
+<!-- Deep Ground-Level Expertise at Our Showrooms -->
+<h2>Deep Ground-Level Expertise at Our Showrooms</h2>
+<p>We do not just sell mattresses; we understand the science of sleep. Our retail galleries are managed by seasoned professionals with hands-on factory experience, ensuring you get the most accurate guidance for your comfort:</p>
+
+<h4>📍 Euro Fresh Gallery — Unnao (Flagship Hub)</h4>
+<ul>
+<li><strong>Manager — Ramu Chaurasiya:</strong> Brings over <strong>12 years of master craftsmanship</strong> in structural furniture engineering and core mattress manufacturing.</li>
+<li><strong>Assistant Manager — Abhishek Chaurasiya:</strong> Backed by <strong>10 years of specialized factory experience</strong> dedicated exclusively to the design and assembly of high-density memory-bonded orthopedic layers.</li>
+</ul>
+
+<h4>📍 Euro Fresh Gallery — Prayagraj (Branch Showroom)</h4>
+<ul>
+<li><strong>Manager — Satish Chaurasiya:</strong> Backed by <strong>10 years of specialized factory experience</strong> dedicated exclusively to the design and assembly of high-density memory-bonded orthopedic layers.</li>
+</ul>
+
+<!-- Infrastructure & Manufacturing Excellence -->
+<h2>Infrastructure & Manufacturing Excellence</h2>
+<p>We maintain strict quality control by producing our entire catalog internally across two advanced, large-scale manufacturing facilities in Uttar Pradesh:</p>
+<ul>
+<li><strong>The Sikandrabad Unit (Bulandshahr):</strong> Houses heavy, automated machinery for high-density foam cutting, CNC contouring, and luxury quilted fabric stitching.</li>
+<li><strong>The Aligarh Unit (Chandaus):</strong> Spans a massive 40,000 square meters, explicitly dedicated to heavy-duty bulk foam block chemical formulations and large-scale assembly.</li>
+</ul>
+
+<!-- The Euro Fresh Promise -->
+<h2>The Euro Fresh Promise: Why Shop With Us?</h2>
+<ul>
+<li><strong>Zero-Reverse Pressure Technology:</strong> Our adaptive foam layouts respond to body heat and weight, evenly distributing pressure to eliminate morning body aches.</li>
+<li><strong>Custom-Cut Dimensions:</strong> No matter the size of your bed frame, our galleries specialize in delivering custom-tailored mattresses made exactly to your requirements.</li>
+<li><strong>Better Air Circulation:</strong> Engineered with premium breathable fabrics and open-cell channels to keep you cool and fresh all night.</li>
+<li><strong>Easy Financing & Delivery:</strong> Enjoy seamless doorstep delivery, flexible payment models, and clear post-purchase product warranties.</li>
+</ul>
+
+<!-- Our Core Product Spectrum -->
+<h2>Our Core Product Spectrum</h2>
+<p>Our showrooms maintain a fully stocked inventory across three core categories:</p>
+
+<h4>Premium Orthopedic Mattresses</h4>
+<p>Turbo Spine, Spine Support, Duet Comfort, Pillow Top, Puff Comfy, Memory Comfort, Euro Top, and Perfect Comfort Mattress.</p>
+
+<h4>Bedding Utilities & Pillows</h4>
+<p>Double Bed, Fiber Pillows, Memory Pillows, Puff Bolsters, Waterproof Mattress Protectors, premium Bedsheets, and heavy King/Queen Size Quilts.</p>
+
+<h4>Smart Living Furniture</h4>
+<p>Sofa Set, Space-saving Sofa-Cum-Beds and our signature, heavy-duty Turbo Sofa Sets.</p>
+
+<h4>Industrial PU & Rebonded Foams</h4>
+<p>Triveni Almirah, Turbo Plus Foam, Softy Foam, HR (High Resilience) Foam, Euro Fresh Bond (110-Density), and Turbo Bonded cores (70-100 Density).</p>
+
+
+
+				
 				<section class="elementor-section elementor-top-section elementor-element elementor-element-a9d62eb elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a9d62eb" data-element_type="section">
 						<div class="elementor-container elementor-column-gap-default">
 					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-f3d1a20" data-id="f3d1a20" data-element_type="column">
