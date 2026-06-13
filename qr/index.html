@@ -46,10 +46,10 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 </style>
 
 
-    <style>
+   <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #111; /* डार्क बैकग्राउंड */
+            background-color: #111;
             text-align: center;
             padding: 20px;
             color: #fff;
@@ -61,22 +61,42 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             text-shadow: 0 2px 4px rgba(255, 215, 0, 0.3);
         }
 
-        /* Grid Layout */
+        /* मुख्य कंटेनर */
         .qr-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
+            gap: 35px;
             max-width: 1000px;
             margin: 0 auto;
             padding: 10px;
         }
 
-        /* गोल्डन बॉक्स */
+        /* मुख्य रैपर जो पूरे सेट को संभालता है */
+        .qr-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* बॉक्स से ऊपर वाला नाम (<p> टैग) */
+        .qr-wrapper p {
+            font-size: 18px; /* नाम को थोड़ा और स्पष्ट किया */
+            font-weight: bold;
+            background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 0 0 15px 0; /* नाम के नीचे और बॉक्स से ऊपर की दूरी */
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+
+        /* केवल QR कोड का गोल्डन बॉक्स */
         .qr-card {
             background: #222;
             padding: 20px;
             border-radius: 12px;
-            position: relative;
+            width: 100%;
+            box-sizing: border-box;
             border: 2px solid transparent;
             background-image: linear-gradient(#222, #222), linear-gradient(45deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
             background-origin: border-box;
@@ -85,7 +105,8 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .qr-card:hover {
+        /* होवर करने पर केवल इमेज वाला गोल्डन बॉक्स ऊपर उठेगा */
+        .qr-wrapper:hover .qr-card {
             transform: translateY(-8px);
             box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
         }
@@ -96,37 +117,29 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             max-width: 180px;
             height: auto;
             display: block;
-            margin: 0 auto 15px auto;
+            margin: 0 auto;
             border-radius: 6px;
             border: 1px solid #444;
         }
 
-        /* QR Code टेक्स्ट */
-        .qr-card p {
-            font-size: 16px;
-            font-weight: bold;
-            background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin: 5px 0 15px 0;
-        }
-
-        /* प्रीमियम गोल्डन डाउनलोड बटन */
+        /* बॉक्स से बाहर वाला डाउनलोड बटन */
         .download-btn {
             display: inline-block;
             text-decoration: none;
             padding: 10px 20px;
             font-size: 14px;
             font-weight: bold;
-            color: #111; /* बटन के अंदर काले रंग का टेक्स्ट */
+            color: #111;
             background: linear-gradient(45deg, #bf953f, #fcf6ba, #b38728);
             border-radius: 25px;
             box-shadow: 0 3px 10px rgba(212, 175, 55, 0.4);
             transition: transform 0.2s, box-shadow 0.2s;
             cursor: pointer;
+            width: fit-content;
+            margin-top: 15px; /* बॉक्स से नीचे की दूरी */
         }
 
-        /* बटन पर माउस ले जाने पर इफेक्ट */
+        /* बटन पर होवर इफेक्ट */
         .download-btn:hover {
             transform: scale(1.05);
             box-shadow: 0 5px 15px rgba(255, 215, 0, 0.8);
